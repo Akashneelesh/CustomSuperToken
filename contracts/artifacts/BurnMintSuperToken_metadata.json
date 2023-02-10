@@ -1,0 +1,667 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Initialized",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ZeroAddress",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "previousAdminRole",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "newAdminRole",
+						"type": "bytes32"
+					}
+				],
+				"name": "RoleAdminChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "RoleGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "RoleRevoked",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "BURNER_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "DEFAULT_ADMIN_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MINTER_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "userData",
+						"type": "bytes"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					}
+				],
+				"name": "getRoleAdmin",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "grantRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "factory",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initialSupply",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "userData",
+						"type": "bytes"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "initialAddress",
+						"type": "address"
+					}
+				],
+				"name": "initializeProxy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "userData",
+						"type": "bytes"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "renounceRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "revokeRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "jtriley.eth",
+			"events": {
+				"RoleAdminChanged(bytes32,bytes32,bytes32)": {
+					"details": "Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._"
+				},
+				"RoleGranted(bytes32,address,address)": {
+					"details": "Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}."
+				},
+				"RoleRevoked(bytes32,address,address)": {
+					"details": "Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"burn(uint256,bytes)": {
+					"params": {
+						"amount": "Amount to burn"
+					}
+				},
+				"getRoleAdmin(bytes32)": {
+					"details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+				},
+				"grantRole(bytes32,address)": {
+					"details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
+				},
+				"hasRole(bytes32,address)": {
+					"details": "Returns `true` if `account` has been granted `role`."
+				},
+				"initialize(address,string,string,uint256,address,bytes)": {
+					"details": "We MUST mint here, there is no other way to mint tokens",
+					"params": {
+						"factory": "Super Token factory for initialization",
+						"initialSupply": "Initial token supply to pre-mint",
+						"name": "Name of Super Token",
+						"receiver": "Receiver of pre-mint",
+						"symbol": "Symbol of Super Token",
+						"userData": "Arbitrary user data for pre-mint"
+					}
+				},
+				"initializeProxy(address)": {
+					"details": "Called by the SuperTokenFactory contract on upgrade",
+					"params": {
+						"initialAddress": "logic contract address"
+					}
+				},
+				"mint(address,uint256,bytes)": {
+					"params": {
+						"amount": "Amount to mint",
+						"receiver": "Receiver of minted tokens"
+					}
+				},
+				"renounceRole(bytes32,address)": {
+					"details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event."
+				},
+				"revokeRole(bytes32,address)": {
+					"details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				}
+			},
+			"title": "Burnable and Mintable Pure Super Token",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"Initialized()": [
+					{
+						"notice": "Thrown when the logic contract has been set"
+					}
+				],
+				"ZeroAddress()": [
+					{
+						"notice": "Thrown when the logic contract address is zero"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"BURNER_ROLE()": {
+					"notice": "Burner Role"
+				},
+				"MINTER_ROLE()": {
+					"notice": "Minter Role"
+				},
+				"burn(uint256,bytes)": {
+					"notice": "Burns from message sender"
+				},
+				"initialize(address,string,string,uint256,address,bytes)": {
+					"notice": "Initializer, used AFTER factory upgrade"
+				},
+				"initializeProxy(address)": {
+					"notice": "Stores the logic contract address only once."
+				},
+				"mint(address,uint256,bytes)": {
+					"notice": "Mints tokens, only the owner may do this"
+				}
+			},
+			"notice": "This does not perform checks when burning",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BurnMintSuperToken.sol": "BurnMintSuperToken"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/AccessControl.sol": {
+			"keccak256": "0x67e3daf189111d6d5b0464ed09cf9f0605a22c4b965a7fcecd707101faff008a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cbbb1a75e4064d564bf69e74970eef35064e51fcc09cbf3589aee7faa60d6afe",
+				"dweb:/ipfs/QmYfAtQwFSGmxomnyAV3tpBDbfDwiFXV61osWW2zzQVg5Q"
+			]
+		},
+		"@openzeppelin/contracts/access/IAccessControl.sol": {
+			"keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+				"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+			]
+		},
+		"@openzeppelin/contracts/proxy/Proxy.sol": {
+			"keccak256": "0xc130fe33f1b2132158531a87734153293f6d07bc263ff4ac90e85da9c82c0e27",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8831721b6f4cc26534d190f9f1631c3f59c9ff38efdd911f85e0882b8e360472",
+				"dweb:/ipfs/QmQZnLErZNStirSQ13ZNWQgvEYUtGE5tXYwn4QUPaVUfPN"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC777/IERC777.sol": {
+			"keccak256": "0x385a7061f1436b079d44c140dee9387d5313e94874ff9ee877dc0085c981ac3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1c3fe22bb0d9527356e11f267f9187134de4d4ed1ff77468b4d73e3238697b96",
+				"dweb:/ipfs/Qmc8caJctgxbzXEpxRogQMR2bnBk5U67hA7kKbUEG2PUXV"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634",
+				"dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
+				"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+				"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol": {
+			"keccak256": "0xa72d8fea72c6ce0d46007cfddeee507a8aae688cfa698e34767ac32ed629dfc7",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://f965779bd0855f0959c0a99bd4c0198eaf3546f9c87da81780e815e7f58ada2d",
+				"dweb:/ipfs/QmTaAh15dVoBqjwsnQSHzewvKgDmoj2of3t9P4Uzcnvtie"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol": {
+			"keccak256": "0x9b4fab6dcac1337f78e04d67d8c2b48b1de8bd4bbf14b475840f9dbda7b8f21e",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://cc2f3629ad0cb46bd4f595880591ad6c9d75a82d920cb9355e462fbf8022c820",
+				"dweb:/ipfs/QmXMovxK4qpWT4yffXxUVjkMNwxEfS6mtn39mLSmjaxEdW"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol": {
+			"keccak256": "0x6cc4b0724d977190c7441dfc3be6c6e48b43b555c3370af32ef5b6600f15f53f",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://3e89c944642772a42429f21a11017b57deb98a9198f8e4f8749f00aaee71299e",
+				"dweb:/ipfs/QmaSv9GvqikcGHJ3tcwATDHSpQw6mfnHPDtcfqcZSS7LF6"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol": {
+			"keccak256": "0x2ccec11f964b165f64e453192793991bf28e1054069b6f709a39849a8286aeb4",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://edbaf6db0b9c6803dcdb7c91a2ddbdba503a41ecc5cecf9c27a43643669bfff1",
+				"dweb:/ipfs/QmYpf7XFKrnB2ZAPf8cDqfvZDfyoxMHA1x2FQSYzDFE3KZ"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol": {
+			"keccak256": "0x316aa6cd16167569d5ee47fb2e4673b1def2117c7ea56969290ab6aec97cd263",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://a5eb13acce613a227c2c2b3da2b88ad6361c9e541ca59ccee0bb5cf42cffccc6",
+				"dweb:/ipfs/QmceA9RWHL1BWk4cPnYY55FjAdsEi1LfXrC11RbF8Wb8eW"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol": {
+			"keccak256": "0xab9dab941f99d0f0ef6125fb6eafde03378d7c3e94e613dd12fb7fbf594c3373",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://928c6ef915dee69058d4cfcb9f2344d4fc78d9763b47b17e5c03fbff64ba3c64",
+				"dweb:/ipfs/Qmdk733ZHceatz3qbuodLCCS9TUspJJtXLoX6vWwMvrPDE"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol": {
+			"keccak256": "0x90a9259d0f0bb6b1bb6d48f051277eb75df96a9fbe684a203a3a468ad19318e2",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://9c8162a2d07ffe768920fef55292684149173afefbfba76b8fca007e55092229",
+				"dweb:/ipfs/QmducLNwrzeUXEpBjUTSMu7sfmQEwVhcYXApe4brc1zQ6V"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol": {
+			"keccak256": "0x9cad3866982902ea88df0874a563d2e4aeba5a5bcc6289c30cccf9b4099d2fb6",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://e8fd960b259331f204c7cb7dcd32b09d68f4294e3b872fad00ad467609c3ef72",
+				"dweb:/ipfs/QmeZFEvsDunXQGPbXFfN5AvfKM5am1FY8Xv6e3c4tNKvgY"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol": {
+			"keccak256": "0x55be78ffb441c782f612b153d7d9049e3f0dbfd412c1f7df29c896b972b2985f",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://a223c68e38a6c9b1e363e525911bc7eda44ea517865ae53bd0d34ff858cc02ae",
+				"dweb:/ipfs/QmVruGehibG6Emr2A6JHwUnhd4NzsGkE24cbGqnDpEvrKh"
+			]
+		},
+		"@superfluid-finance/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol": {
+			"keccak256": "0x7456cd394cc905aae7cdbd4601ce1c296c768c13c28e66efbb913cc070bad3e4",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://5a6589b428b724721ba5b4dd196c8f366a6e694ef313add093f29af64496c042",
+				"dweb:/ipfs/QmSMgV6y8L6pyyzDz6kKmafVwujNWcjTqutpCBxe4uNRqg"
+			]
+		},
+		"contracts/BurnMintSuperToken.sol": {
+			"keccak256": "0x7787b64e97d31d157e4aab8b422f0ea202b4648bb2bc2419e59df419d487668a",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://825f21931d504896da526b1c1d2afc68914ab02ab1133c5121cbf1b172c9cc99",
+				"dweb:/ipfs/QmdmCPKzwTirs5BwSsdgSjF4fHYd4AUiRbT4qAVCWN385D"
+			]
+		},
+		"contracts/base/SuperTokenBase.sol": {
+			"keccak256": "0x20ad0c53399cd71f9e2af49c7f2f99a423bacdf7da4c64dfa65e5aca40dac571",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://1c6ab8fe1ae02242871cf5d805fbd8b753f5a1df9515658802cdea7b44c3914c",
+				"dweb:/ipfs/QmfWFs8zVLnpDMZBRQTTLgmT9VdSmEchZhR2SoAzrdygzq"
+			]
+		},
+		"contracts/base/SuperTokenStorage.sol": {
+			"keccak256": "0x8e08c8b78f0e7fbdbcd378bf2fa2d518deba7d9591d20a9457571fceb9f95687",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://5f0323df5e91e7fafd940ea9a8f808c61b5cd6f30974d6d071b25b350ce1ef26",
+				"dweb:/ipfs/Qmd5qFWZsW8NGuswNJW3dLkiktNu1MymbZ26VjVRypy3A8"
+			]
+		},
+		"contracts/base/UUPSProxy.sol": {
+			"keccak256": "0xd3e51b5fc04238364c4ed9068e31e88bd44e20546089e4fb76422ea1c2eac1ca",
+			"license": "AGPLv3",
+			"urls": [
+				"bzz-raw://041548f8c5c4bf62fcf02677272196f953f320774ff784a7a93351e4c45956aa",
+				"dweb:/ipfs/QmPvKxXbCFrWcHnwbTbSdEa96j4No8DHeuzXG1ftKPHwf1"
+			]
+		}
+	},
+	"version": 1
+}
